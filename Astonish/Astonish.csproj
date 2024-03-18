@@ -1,0 +1,533 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3FB9CA07-25E2-4AF1-8964-FB9AA8CE4972}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Astonish</RootNamespace>
+    <AssemblyName>Astonish</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44335</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about_us.aspx" />
+    <Content Include="admin\add-category.aspx" />
+    <Content Include="admin\add-product.aspx" />
+    <Content Include="admin\add-testimonials.aspx" />
+    <Content Include="admin\css\styles.css" />
+    <Content Include="admin\dashboard.aspx" />
+    <Content Include="admin\logout.aspx" />
+    <Content Include="admin\manage-categories.aspx" />
+    <Content Include="admin\manage-orders.aspx" />
+    <Content Include="admin\manage-product.aspx" />
+    <Content Include="admin\manage-testimonials.aspx" />
+    <Content Include="admin\manage-users.aspx" />
+    <Content Include="admin\update-category.aspx" />
+    <Content Include="admin\update-order.aspx" />
+    <Content Include="admin\update-product.aspx" />
+    <Content Include="admin\update-testimonials.aspx" />
+    <Content Include="admin\update-user.aspx" />
+    <Content Include="all_products.aspx" />
+    <Content Include="App_Data\Astonish_db.mdf" />
+    <Content Include="App_Data\Astonish_db_log.ldf">
+      <DependentUpon>Astonish_db.mdf</DependentUpon>
+    </Content>
+    <Content Include="assets\css\admin_styles.css" />
+    <Content Include="assets\css\fontawesome.css" />
+    <Content Include="assets\css\login.css" />
+    <Content Include="assets\css\owl.css" />
+    <Content Include="assets\css\profile.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\track-order.css" />
+    <Content Include="assets\demo\chart-area-demo.js" />
+    <Content Include="assets\demo\chart-bar-demo.js" />
+    <Content Include="assets\demo\chart-pie-demo.js" />
+    <Content Include="assets\demo\datatables-demo.js" />
+    <Content Include="assets\fonts\flexslider-icon.svg" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\images\1.jpg" />
+    <Content Include="assets\images\2.jpg" />
+    <Content Include="assets\images\3.jpg" />
+    <Content Include="assets\images\4.jpg" />
+    <Content Include="assets\images\5.jpg" />
+    <Content Include="assets\images\6.jpg" />
+    <Content Include="assets\images\7.jpg" />
+    <Content Include="assets\images\8.jpg" />
+    <Content Include="assets\images\about-1-570x350.jpg" />
+    <Content Include="assets\images\blog-1-370x270.jpg" />
+    <Content Include="assets\images\blog-2-370x270.jpg" />
+    <Content Include="assets\images\blog-3-370x270.jpg" />
+    <Content Include="assets\images\blog-image-fullscren-1-1920x700.jpg" />
+    <Content Include="assets\images\favicon.ico" />
+    <Content Include="assets\images\heading-1-1920x500.jpg" />
+    <Content Include="assets\images\heading-2-1920x500.jpg" />
+    <Content Include="assets\images\heading-3-1920x500.jpg" />
+    <Content Include="assets\images\heading-4-1920x500.jpg" />
+    <Content Include="assets\images\heading-5-1920x500.jpg" />
+    <Content Include="assets\images\heading-6-1920x500.jpg" />
+    <Content Include="assets\images\other-image-fullscren-1-1920x900.jpg" />
+    <Content Include="assets\images\product-4-370x270.jpg" />
+    <Content Include="assets\images\product-5-370x270.jpg" />
+    <Content Include="assets\images\product-6-370x270.jpg" />
+    <Content Include="assets\images\slider-image-1-1920x600.jpg" />
+    <Content Include="assets\images\slider-image-2-1920x600.jpg" />
+    <Content Include="assets\images\slider-image-3-1920x600.jpg" />
+    <Content Include="assets\images\team_01.jpg" />
+    <Content Include="assets\js\custom.js" />
+    <Content Include="assets\js\datatables-simple-demo.js" />
+    <Content Include="assets\js\owl.js" />
+    <Content Include="assets\js\scripts.js" />
+    <Content Include="assets\product-image\18-min_720x.jpg" />
+    <Content Include="assets\product-image\19-min_720x.jpg" />
+    <Content Include="assets\product-image\aha-bha-10-1200--1min-1645781661616_720x.jpg" />
+    <Content Include="assets\product-image\AHAPHABHA32_1200-1-min_720x.jpg" />
+    <Content Include="assets\product-image\Alpha Arbutin\arbutin-2-serum-1200--2min-1645936951710_720x.jpg" />
+    <Content Include="assets\product-image\Alpha Arbutin\arbutin-2-serum-1200--3min-1645936951751_720x.jpeg" />
+    <Content Include="assets\product-image\Alpha Arbutin\arbutin-study-2min-1645942298105.png" />
+    <Content Include="assets\product-image\AlphaArbutin2_1200-1-min_720x.jpg" />
+    <Content Include="assets\product-image\B5Moisturizer1200-2-min_720x.jpg" />
+    <Content Include="assets\product-image\Clenser\Maleic Bond Repair Complex 3.5%25 Shampoo\Websiteimage11001600px_1_720x.jpg" />
+    <Content Include="assets\product-image\Clenser\Maleic Bond Repair Complex 3.5%25 Shampoo\Websiteimage11001600px_2_1728x.jpg" />
+    <Content Include="assets\product-image\Clenser\Maleic Bond Repair Complex 3.5%25 Shampoo\Websiteimage11001600px_3_720x.png" />
+    <Content Include="assets\product-image\Clenser\Salicylic Acid + LHA 02%25 Body Wash\13-min_720x.jpg" />
+    <Content Include="assets\product-image\Clenser\Salicylic Acid + LHA 02%25 Body Wash\14-min_1728x.jpg" />
+    <Content Include="assets\product-image\Clenser\Salicylic Acid + LHA 02%25 Body Wash\Websiteimage11001600px-min_1_720x.png" />
+    <Content Include="assets\product-image\GlycolicMainimage-min_720x.jpg" />
+    <Content Include="assets\product-image\GranactiveRetinoid2_1200-1-min_720x.jpg" />
+    <Content Include="assets\product-image\Hairgrowthserum1200-2-min_720x.jpg" />
+    <Content Include="assets\product-image\HAPGA2_1200-1-min_720x.jpg" />
+    <Content Include="assets\product-image\Home\Fe4nzfNLSF6VPdm841Tv.png" />
+    <Content Include="assets\product-image\Home\Web_Home.jpg" />
+    <Content Include="assets\product-image\Home\Web_Home.png" />
+    <Content Include="assets\product-image\MarulaMoisturizer1200-2-min_720x.jpg" />
+    <Content Include="assets\product-image\MinimalistLIPBalmSPF30-min_1_720x.png" />
+    <Content Include="assets\product-image\Moisturizer\Ceramides 0.3%25 + Madecassoside\CeramideOilySkin-min_720x.jpg" />
+    <Content Include="assets\product-image\Moisturizer\Ceramides 0.3%25 + Madecassoside\CeramideOilySkinCopy-min_720x.jpg" />
+    <Content Include="assets\product-image\Moisturizer\Squalane 100%25\squalane-1200--1min-1646506384396_720x.jpg" />
+    <Content Include="assets\product-image\Moisturizer\Squalane 100%25\squalane-1200--3min-1646506384464_720x.jpeg" />
+    <Content Include="assets\product-image\Moisturizer\Squalane 100%25\Squalane1200-2-min_720x.jpg" />
+    <Content Include="assets\product-image\NewNia10_2048x.jpg" />
+    <Content Include="assets\product-image\OatCleanser1200-1_720x.jpg" />
+    <Content Include="assets\product-image\PHAToner1200-2-min_720x.jpg" />
+    <Content Include="assets\product-image\Retinolserum1200-2-min_720x.jpg" />
+    <Content Include="assets\product-image\SalicylicAcid2_1200-1-min_720x.jpg" />
+    <Content Include="assets\product-image\SepicalmMoisturizer1200-2_720x.jpg" />
+    <Content Include="assets\product-image\SPF501200-2-min_720x.jpg" />
+    <Content Include="assets\product-image\SPF601200-2-min_720x.jpg" />
+    <Content Include="assets\product-image\SPF\Invisible SPF 40 Sunscreen\ProductImage1_720x.jpg" />
+    <Content Include="assets\product-image\SPF\Invisible SPF 40 Sunscreen\ProductImage2_1728x.jpg" />
+    <Content Include="assets\product-image\SPF\Invisible SPF 40 Sunscreen\ProductImage3_720x.jpg" />
+    <Content Include="assets\product-image\Stickmailimage-min_720x.jpg" />
+    <Content Include="assets\product-image\Tranexamicserum1200-2-min_1_720x.jpg" />
+    <Content Include="assets\product-image\Untitled_1_720x.jpg" />
+    <Content Include="assets\product-image\VitaminC10_1200-1-min_720x.jpg" />
+    <Content Include="assets\product-image\Websiteimage11001600px-min_2_720x.jpg" />
+    <Content Include="cart.aspx" />
+    <Content Include="catagory_product.aspx" />
+    <Content Include="checkout.aspx" />
+    <Content Include="contact.aspx" />
+    <Content Include="profile.aspx" />
+    <Content Include="image_btn\heart.png" />
+    <Content Include="image_btn\heart_icon.png" />
+    <Content Include="image_btn\shopping-cart.png" />
+    <Content Include="image_btn\user.png" />
+    <Content Include="includes\config.php" />
+    <Content Include="includes\footer.php" />
+    <Content Include="includes\header.php" />
+    <Content Include="includes\leftbar.php" />
+    <Content Include="index.aspx" />
+    <Content Include="login_form.aspx" />
+    <Content Include="noCart.aspx" />
+    <Content Include="noWish.aspx" />
+    <Content Include="product_details.aspx" />
+    <Content Include="register_form.aspx" />
+    <Content Include="terms.aspx" />
+    <Content Include="track_orders.aspx" />
+    <Content Include="vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="vendor\jquery\jquery.js" />
+    <Content Include="vendor\jquery\jquery.min.js" />
+    <Content Include="vendor\jquery\jquery.slim.js" />
+    <Content Include="vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="wishlist.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="about_us.aspx.cs">
+      <DependentUpon>about_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about_us.aspx.designer.cs">
+      <DependentUpon>about_us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\add-category.aspx.cs">
+      <DependentUpon>add-category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\add-category.aspx.designer.cs">
+      <DependentUpon>add-category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\add-product.aspx.cs">
+      <DependentUpon>add-product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\add-product.aspx.designer.cs">
+      <DependentUpon>add-product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\add-testimonials.aspx.cs">
+      <DependentUpon>add-testimonials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\add-testimonials.aspx.designer.cs">
+      <DependentUpon>add-testimonials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AdminClass.cs" />
+    <Compile Include="admin\dashboard.aspx.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\dashboard.aspx.designer.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\manage-categories.aspx.cs">
+      <DependentUpon>manage-categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\manage-categories.aspx.designer.cs">
+      <DependentUpon>manage-categories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\manage-orders.aspx.cs">
+      <DependentUpon>manage-orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\manage-orders.aspx.designer.cs">
+      <DependentUpon>manage-orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\manage-product.aspx.cs">
+      <DependentUpon>manage-product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\manage-product.aspx.designer.cs">
+      <DependentUpon>manage-product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\manage-testimonials.aspx.cs">
+      <DependentUpon>manage-testimonials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\manage-testimonials.aspx.designer.cs">
+      <DependentUpon>manage-testimonials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\manage-users.aspx.cs">
+      <DependentUpon>manage-users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\manage-users.aspx.designer.cs">
+      <DependentUpon>manage-users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\update-category.aspx.cs">
+      <DependentUpon>update-category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\update-category.aspx.designer.cs">
+      <DependentUpon>update-category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\update-order.aspx.cs">
+      <DependentUpon>update-order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\update-order.aspx.designer.cs">
+      <DependentUpon>update-order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\update-product.aspx.cs">
+      <DependentUpon>update-product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\update-product.aspx.designer.cs">
+      <DependentUpon>update-product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\update-testimonials.aspx.cs">
+      <DependentUpon>update-testimonials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\update-testimonials.aspx.designer.cs">
+      <DependentUpon>update-testimonials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\update-user.aspx.cs">
+      <DependentUpon>update-user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\update-user.aspx.designer.cs">
+      <DependentUpon>update-user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin_master.Master.cs">
+      <DependentUpon>admin_master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_master.Master.designer.cs">
+      <DependentUpon>admin_master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="all_products.aspx.cs">
+      <DependentUpon>all_products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="all_products.aspx.designer.cs">
+      <DependentUpon>all_products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Astonish.Master.cs">
+      <DependentUpon>Astonish.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Astonish.Master.designer.cs">
+      <DependentUpon>Astonish.Master</DependentUpon>
+    </Compile>
+    <Compile Include="cart.aspx.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cart.aspx.designer.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catagory_product.aspx.cs">
+      <DependentUpon>catagory_product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catagory_product.aspx.designer.cs">
+      <DependentUpon>catagory_product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkout.aspx.cs">
+      <DependentUpon>checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkout.aspx.designer.cs">
+      <DependentUpon>checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login_form.aspx.cs">
+      <DependentUpon>login_form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login_form.aspx.designer.cs">
+      <DependentUpon>login_form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="noCart.aspx.cs">
+      <DependentUpon>noCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="noCart.aspx.designer.cs">
+      <DependentUpon>noCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="noWish.aspx.cs">
+      <DependentUpon>noWish.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="noWish.aspx.designer.cs">
+      <DependentUpon>noWish.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="product_details.aspx.cs">
+      <DependentUpon>product_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="product_details.aspx.designer.cs">
+      <DependentUpon>product_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="register_form.aspx.cs">
+      <DependentUpon>register_form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register_form.aspx.designer.cs">
+      <DependentUpon>register_form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="terms.aspx.cs">
+      <DependentUpon>terms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="terms.aspx.designer.cs">
+      <DependentUpon>terms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="track_orders.aspx.cs">
+      <DependentUpon>track_orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="track_orders.aspx.designer.cs">
+      <DependentUpon>track_orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wishlist.aspx.cs">
+      <DependentUpon>wishlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wishlist.aspx.designer.cs">
+      <DependentUpon>wishlist.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Astonish.Master" />
+    <Content Include="assets\fonts\Flaticon.woff" />
+    <Content Include="assets\fonts\flexslider-icon.eot" />
+    <Content Include="assets\fonts\flexslider-icon.ttf" />
+    <Content Include="assets\fonts\flexslider-icon.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="admin_master.Master" />
+    <None Include="packages.config" />
+    <Content Include="vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="vendor\jquery\jquery.min.map" />
+    <Content Include="vendor\jquery\jquery.slim.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assets\product-image\AHA BHA 10%25\" />
+    <Folder Include="assets\product-image\Clenser\Alpha Lipoic + Glycolic 07%25 Cleanser\" />
+    <Folder Include="assets\product-image\Clenser\Aquaporin Booster 05%25 Cleanser\" />
+    <Folder Include="assets\product-image\Clenser\Oat Extract 06%25 Gentle Cleanser\" />
+    <Folder Include="assets\product-image\Clenser\Salicylic Acid + LHA 02%25 Face Cleanser\" />
+    <Folder Include="assets\product-image\Moisturizer\L-Ascorbic Acid 08%25 Lip Treatment Balm\" />
+    <Folder Include="assets\product-image\Moisturizer\Lip Balm SPF 30\" />
+    <Folder Include="assets\product-image\Moisturizer\Marula Oil 05%25 Moisturizer\" />
+    <Folder Include="assets\product-image\Moisturizer\Vitamin B5 10%25 Moisturizer\" />
+    <Folder Include="assets\product-image\SPF\SPF 50 Sunscreen Stick\" />
+    <Folder Include="assets\product-image\SPF\SPF 60 Sunscreen\" />
+    <Folder Include="assets\product-image\Toner\Glycolic Acid 08%25 Exfoliating Liquid\" />
+    <Folder Include="assets\product-image\Toner\Polyhydroxy Acid %28PHA%29 03%25 Toner\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50226</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44335/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
