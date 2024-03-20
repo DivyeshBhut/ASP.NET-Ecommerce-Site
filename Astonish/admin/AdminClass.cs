@@ -28,7 +28,6 @@ namespace Astonish.admin
             cmd = new SqlCommand("insert into category_tbl (c_name) values('" + c_name + "')", con);
             cmd.ExecuteNonQuery();
             con.Close();
-            page.ClientScript.RegisterStartupScript(page.GetType(), "alert", "alert('Category added successfully');", true);
         }
         public DataSet getCategory()
         {
@@ -53,7 +52,6 @@ namespace Astonish.admin
             con = getCon();
             cmd = new SqlCommand("delete from category_tbl where c_id ='" + c_id + "'", con);
             cmd.ExecuteNonQuery();
-            page.ClientScript.RegisterStartupScript(page.GetType(), "alert", "alert('Category deleted successfully');", true);
             con.Close();
         }
         public void updateCategory(Page page, string name,string c_id)
@@ -61,7 +59,6 @@ namespace Astonish.admin
             con = getCon();
             cmd = new SqlCommand("update category_tbl set c_name='" + name + "' where c_id='" + c_id + "'", con);
             cmd.ExecuteNonQuery();
-            page.ClientScript.RegisterStartupScript(page.GetType(), "alert", "alert('Category updated successfully');", true);
             con.Close();
         }
 

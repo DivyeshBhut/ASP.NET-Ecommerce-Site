@@ -22,7 +22,10 @@ namespace Astonish.admin
         protected void Page_Load(object sender, EventArgs e)
         {
             getcon();
-            PopulateCategoryDropDown();
+            if (!IsPostBack)
+            {
+                PopulateCategoryDropDown();
+            }
         }
         void getcon()
         {
@@ -31,8 +34,11 @@ namespace Astonish.admin
         }
         void imgupload()
         {
-            fnm = "../assets/product-image/" + p_img.FileName;
-            p_img.SaveAs(Server.MapPath(fnm));
+            if (p_img.HasFile)
+            {
+                fnm = "../assets/product-image/" + p_img.FileName;
+                p_img.SaveAs(Server.MapPath(fnm));
+            }
         }
         void PopulateCategoryDropDown()
         {
@@ -54,16 +60,34 @@ namespace Astonish.admin
             p_mrp.Text = "";
             p_price.Text = "";
             p_desc.Text = "";
-            qty.Text = "";
         }
-        
+
         protected void btnsubmit_Click(object sender, EventArgs e)
         {
-            imgupload();
-            cs = new AdminClass();
-            cs.addProduct(this, p_name.Text, fnm, Convert.ToInt32(p_mrp.Text), Convert.ToInt32(p_price.Text),p_desc.Text,categoryDropDown.SelectedIndex, Convert.ToInt32(qty.Text));
-            Response.Write("<script>alert('Product added successfully');</script>");
-            clearFields();
+            if (!string.IsNullOrWhiteSpace(p_name.Text) &&
+                !string.IsNullOrWhiteSpace(p_mrp.Text) &&
+                !string.IsNullOrWhiteSpace(p_price.Text) &&
+                !string.IsNullOrWhiteSpace(p_desc.Text) &&
+                categoryDropDown.SelectedIndex != 0 &&
+                !string.IsNullOrWhiteSpace(qty.Text))
+            {
+                imgupload();
+                if (!string.IsNullOrWhiteSpace(fnm))
+                {
+                    cs = new AdminClass();
+                    cs.addProduct(this, p_name.Text, fnm, Convert.ToInt32(p_mrp.Text), Convert.ToInt32(p_price.Text), p_desc.Text, categoryDropDown.SelectedIndex, Convert.ToInt32(qty.Text));
+                    Response.Write("<script>alert('Product added successfully');</script>");
+                    clearFields();
+                }
+                else
+                {
+                    Response.Write("<script>alert('Please select an image');</script>");
+                }
+            }
+            else
+            {
+                Response.Write("<script>alert('Please fill all required fields');</script>");
+            }
         }
     }
 }

@@ -26,11 +26,12 @@ namespace Astonish.admin
             {
                 cs = new AdminClass();
                 cs.addCategory(this, c_name.Text);
+                Response.Write("<script>alert('Category added successfully');</script>");
                 c_name.Text = "";
             }
             else
             {
-                ClientScript.RegisterStartupScript(GetType(), "alert", "alert('Please fill all the required fields');", true);
+                Response.Write("<script>alert('Please fill all the required fields');</script>");
             }
         }
     }

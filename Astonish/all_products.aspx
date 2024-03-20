@@ -20,9 +20,9 @@
                 <asp:DataList ID="DataListAllProducts" runat="server" RepeatColumns="3" RepeatDirection="Horizontal">
                     <ItemTemplate>
                         <%--<div class="col-md-4">--%>
-                        <div class="product-item" style="margin: 15px;">
+                        <div class="product-item" style="margin: 15px;" >
                             <a href='<%# "product_details.aspx?ProductId=" + Eval("p_id") %>'>
-                                <img src='<%# Eval("p_img") %>' alt='<%# Eval("p_name") %>' />
+                                <img src='<%# Eval("p_img") %>' alt='<%# Eval("p_name") %>' style="height:425px; width:300px; margin-left:20px;"/>
                             </a>
                             <div class="down-content">
                                 <a href='<%# "product_details.aspx?ProductId=" + Eval("p_id") %>'>

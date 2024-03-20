@@ -116,7 +116,7 @@
                         <%--<div class="col-md-4">--%>
                         <div class="product-item" style="margin: 15px">
                             <a href='<%# "product_details.aspx?ProductId=" + Eval("p_id") %>'>
-                                <img src='<%# Eval("p_img") %>' alt="" /></a>
+                                <img src='<%# Eval("p_img") %>' alt="" style="height:440px; width:325px;"/></a>
                             <div class="down-content">
                                 <a href='<%# "product-details.aspx?ProductId=" + Eval("p_id") %>'>
                                     <h4><%# Eval("p_name") %></h4>

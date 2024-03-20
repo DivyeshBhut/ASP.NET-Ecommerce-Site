@@ -32,7 +32,8 @@ namespace Astonish.admin
         {
             cs = new AdminClass();
             cs.updateCategory(this,c_name.Text, Request.QueryString["id"]);
-            c_name.Text = "";
+            Response.Write("<script>alert('Category updated successfully');</script>");
+            Response.Write("<script>window.location.href='manage-categories.aspx'</script>");
         }
         public void fillFields()
         {

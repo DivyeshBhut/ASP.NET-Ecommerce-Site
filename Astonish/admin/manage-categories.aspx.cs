@@ -44,6 +44,7 @@ namespace Astonish.admin
                 ViewState["id"] = id;
                 cs = new AdminClass();
                 cs.deleteCategory(this,ViewState["id"].ToString());
+                Response.Write("<script>alert('Category deleted successfully');</script>");
                 fillgrid();
             }
         }
