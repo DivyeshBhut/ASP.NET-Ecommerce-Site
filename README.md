@@ -45,8 +45,5 @@ Open the project solution file (`AstonishSelfCare.sln`) in Visual Studio.
 - Password : 123
 - Note : You can able to change admin by chaging the 'user_type' from the user_tbl
 
-## Credit
-- Minimlist : https://beminimalist.co
-
 ## Note
-This site only for the study purpose
+This site only for the study purpose.
